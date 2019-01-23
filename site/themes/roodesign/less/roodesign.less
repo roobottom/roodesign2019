@@ -5,7 +5,18 @@
 //layout
 @import 'grid';
 
+//components
+@import 'components/figure';
+
 //modules
+@import 'modules/card';
+
+//move this?
+.break-min(@rule) {
+  @media screen and (min-width: (@break-min-rem) ) {
+    @rule();
+  }
+}
 
 //DEV styles:
 section {
@@ -30,9 +41,13 @@ section {
 }
 
 .prose > * {
-        max-width: 600px;
-    }
+    max-width: 600px;
+}
 
 body {
     padding-bottom: 100px;
+}
+
+figure {
+    outline: 1px solid green;
 }

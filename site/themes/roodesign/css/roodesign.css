@@ -193,12 +193,25 @@ h1 {
   font-family: 'YoungSerif', serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 3.875rem;
-  line-height: 1.06451613;
+  font-size: 2rem;
+  line-height: 1.1875;
+  letter-spacing: -0.1px;
+}
+@media screen and (min-width: 30rem) {
+  h1 {
+    font-size: 3.875rem;
+    line-height: 1.06451613;
+  }
 }
 h2 {
-  font-size: 1.5rem;
-  line-height: 1.16666667;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 30rem) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.16666667;
+  }
 }
 body,
 input,
@@ -206,12 +219,49 @@ textarea,
 button {
   color: #222;
   font-family: 'Glacial Indifference', sans-serif;
+  -webkit-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1;
+  font-variant: normal;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
 }
 .prose p,
 .prose ol,
-.prose ul {
-  font-size: 1.125rem;
-  line-height: 1.55555556;
+.prose ul,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 30rem) {
+  .prose p,
+  .prose ol,
+  .prose ul,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    font-size: 1.125rem;
+    line-height: 1.55555556;
+  }
+}
+.prose .lead {
+  font-size: 1.1875rem;
+  line-height: 1.36842105;
+  color: #505050;
+}
+@media screen and (min-width: 30rem) {
+  .prose .lead {
+    font-size: 1.5rem;
+    line-height: 1.33333333;
+  }
+}
+.prose time {
+  font-size: 0.9375rem;
+  line-height: 1.33333333;
+  color: #505050;
 }
 .prose li + li {
   margin-top: 0.125rem;
@@ -223,22 +273,19 @@ button {
 .prose h3,
 .prose h4,
 .prose h5,
-.prose h6 {
+.prose h6,
+.prose time {
   margin-bottom: 0.75rem;
-}
-.prose figcaption {
-  font-size: 0.9375rem;
-  line-height: 1.33333333;
-  color: #737373;
 }
 .prose a {
   color: #222;
   text-decoration: underline;
 }
-.prose .lead {
-  font-size: 1.5rem;
-  line-height: 1.33333333;
-  color: #505050;
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-weight: bold;
 }
 @supports (display:grid) {
   @media screen and (min-width: 30rem) {
@@ -321,6 +368,64 @@ button {
     }
   }
 }
+.figure img {
+  display: block;
+  max-width: 100%;
+}
+.figure figcaption {
+  font-size: 0.9375rem;
+  line-height: 1.33333333;
+  color: #737373;
+  margin-top: 0.75rem;
+}
+.figure__images {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  align-items: center;
+  min-height: 10.8125rem;
+}
+.figure--gallery .figure__images {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.875rem;
+  grid-gap: var(--gap);
+  -ms-grid-columns: (minmax(16.25rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+}
+.figure--bleed-start .figure__images,
+.figure--bleed-end .figure__images {
+  width: calc(100% + 1.875rem);
+  width: calc(100% + var(--gap));
+}
+.figure--bleed-start.figure--bleed-end .figure__images {
+  width: calc(100% + (2 * 1.875rem));
+  width: calc(100% + (2 * var(--gap)));
+}
+.figure--bleed-start .figure__images {
+  margin-left: -1.875rem;
+  margin-left: calc(-1 * var(--gap));
+}
+.figure--bleed-end .figure__images {
+  margin-right: -1.875rem;
+  margin-right: calc(-1 * var(--gap));
+}
+.figure--stage .figure__images {
+  padding: 1.875rem;
+  padding: var(--gap);
+  box-sizing: border-box;
+  background: #222 url(img/pattern-roo-white-10.svg) top left repeat;
+}
+.figure--stage .figure__images > img {
+  background: white;
+  box-shadow: 0 0 10px black;
+}
+.figure--candy-green .figure__images {
+  background-color: #F0FAF7;
+}
+.card__cover {
+  margin: 0.75rem 0;
+}
 section {
   margin: 0 auto;
   padding: 0 1.875rem;
@@ -344,6 +449,9 @@ section {
 }
 body {
   padding-bottom: 100px;
+}
+figure {
+  outline: 1px solid green;
 }
 
 /*# sourceMappingURL=roodesign.css.map */

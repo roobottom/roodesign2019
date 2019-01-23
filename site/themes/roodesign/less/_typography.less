@@ -46,24 +46,40 @@
     }
     #size {
         .regular() {
-            font-size: unit(18/@base,rem);
-            line-height: 28 / 18;
+            font-size: unit(16/@base,rem);
+            line-height: 24 / 16;
+            .break-min({
+                font-size: unit(18/@base,rem);
+                line-height: 28 / 18;
+            });
         }
         .small() {
             font-size: unit(15/@base, rem); 
             line-height: 20 / 15;
         }
         .large() {
-            font-size: unit(24/@base,rem);
-            line-height: 32 / 24;
+            font-size: unit(19/@base,rem);
+            line-height: 26 / 19;
+            .break-min({
+                font-size: unit(24/@base,rem);
+                line-height: 32 / 24;
+            });
         }
         .h1() {
-            font-size: unit(62/@base, rem);
-            line-height: 66 / 62;
+            font-size: unit(32/@base, rem);
+            line-height: 38 / 32;
+            .break-min({
+                font-size: unit(62/@base, rem);
+                line-height: 66 / 62;
+            });
         }
         .h2() {
-            font-size: unit(24/@base,rem);
-            line-height: 28 / 24;
+            font-size: unit(20/@base,rem);
+            line-height: 24 / 20;
+            .break-min({
+                font-size: unit(24/@base,rem);
+                line-height: 28 / 24;
+            });
         }
     }
     #style {
@@ -77,6 +93,7 @@
 h1 {
     #type > #font > .serif;
     #type > #size > .h1;
+    letter-spacing: -0.1px;
 }
 
 h2 {
@@ -86,35 +103,44 @@ h2 {
 body, input, textarea, button {
     color: @c_grey_x-dark;
     #type > #font > .sans;
+    font-feature-settings: "liga" 1;
+    font-variant: normal;
+    font-kerning: normal;
 }
 
 .prose {
 
-    p, ol, ul {
+    //sizing
+    p, ol, ul, h3, h4, h5, h6 {
         #type > #size > .regular;
+    }
+    .lead {
+        #type > #size > .large;
+        color: @c_grey_dark;
+    }
+    time {
+        #type > #size > .small;
+        color: @c_grey_dark;
     }
 
     //spacing
     li + li {
         margin-top: unit(2/@base,rem);
     }
-    p, ol, ul, h2, h3, h4, h5, h6 {
+    p, ol, ul, h2, h3, h4, h5, h6, time {
         margin-bottom: unit(12/@base,rem);
     }
 
-    figcaption {
-        #type > #size > .small;
-        color: @c_grey_med;
-    }
-
+    
+    //styling
     a {
         #type > #style > .link;
     }
-
-    .lead {
-        #type > #size > .large;
-        color: @c_grey_dark;
+    h3, h4, h5, h6 {
+        font-weight: bold;
     }
+
+    
 
 
 
