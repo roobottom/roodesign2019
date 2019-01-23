@@ -1,0 +1,36 @@
+//global base
+@base: 16;
+@fontbase: 18;
+
+//layout sizing:
+@gap: 30;
+@gap-rem: unit(@gap/@base,rem);
+
+//site sizing:
+@site-width: 1200;
+
+@break-min: 480;
+@break-min-rem: unit(@break-min/@base,rem);
+@break-mid: 1020;
+@break-mid-rem: unit(@break-mid/@base,rem);
+
+//colours
+
+@c_grey_med: #737373;
+
+@c_grey_dark: #505050;
+@c_grey_x-dark: #222;
+
+:root {
+    --gap: @gap-rem;
+    --base: @base;
+    --fontbase: 15;
+}
+
+@media screen and (min-width: (@break-min-rem) ) {
+    :root {
+        --gap: @gap-rem;
+        --base: @base;
+        --fontbase: @fontbase;
+    }
+}

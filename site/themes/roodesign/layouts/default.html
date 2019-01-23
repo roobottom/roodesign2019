@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Another awesome Statamic site">
+    <title>{{ title or site_title }}</title>
+    <link rel="stylesheet" href="{{ theme:css }}">
+</head>
+
+
+<body>
+
+    <div class="container">
+        {{ template_content }}
+    </div>
+
+    <h1>Grid test</h1>
+
+    <h2>Wide grids</h2>
+
+    <section class="grid grid--wide-title">
+        <p>--wide-title</p>
+        <p>Col b</p>
+    </section>
+
+    <section class="grid grid--wide-halves">
+        <p>--wide-halves</p>
+        <p>Col B</p>
+    </section>
+
+    <h2>Standard grids</h2>
+
+
+    <section class="grid grid--title">
+        <p>--title</p>
+        <p>Col B</p>
+    </section>
+
+    
+
+    <section class="grid grid--halves">
+        <p>--halves</p>
+        <p>Col B</p>
+    </section>
+
+    <section class="grid grid--split-halves">
+        <p>--split-halves</p>
+        <p>Col B</p>
+    </section>
+
+    <section class="grid grid--prose">
+        <div class="test">
+
+        </div>
+        <p>--prose</p>
+        <p>Col B</p>
+    </section>
+
+    <section class="grid">
+        <p>[standard full width]</p>
+        <p>Col B</p>
+    </section>
+
+    <section class="prose">
+        <h1>h1: About me</h1>
+        <p class="lead">p.lead: Hello, I’m <strong>Jon Roobottom</strong>. For two decades, I’ve worked hands-on and led teams in creating apps and websites that people
+        love. <em>This is italic</em>. Here's some ligatures: ffl ffi fi</p>
+        <p>p: Recently, I was Head of Design for <a href="#">Firefly Learning</a> — an award-winning Ed-tech company where I helped enhance the school
+        experience for thousands of students, <strong>teachers</strong> and <em>italic.</em></p>
+        <h2>h2: Sub title</h2>
+        <p>p: Before that, I worked in various digital product companies and agencies as a hands-on designer and front-end developer. Now I help organisations affect change through design: by empowering digital teams to work better together.</p>
+        <ul>
+            <li>Item 1</li>
+            <li><strong>Bold item 2</strong></li>
+            <li><em>Em item 3</em></li>
+            <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li><strong>Bold item 2</strong></li>
+            <li><em>Em item 3</em></li>
+            <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
+        </ol>
+        <figcaption>this is small</figcaption>
+    </section>
+   
+
+    <script src="{{ theme:js }}"></script>
+
+</body>
+
+</html>

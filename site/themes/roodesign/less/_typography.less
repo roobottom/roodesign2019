@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('fonts/YoungSerif.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+
+#type {
+    #util {
+        .font-size(@s) {
+            font-size: unit(@fontbase * @s / @base, rem);
+            font-size: ~"calc( ( (var(--fontbase) * @{s}) / var(--base)) * 1rem )";
+        }
+    }
+    #font {
+        .serif() {
+            font-family: 'YoungSerif', serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+        .sans() {
+            font-family: 'Glacial Indifference', sans-serif;
+        }
+    }
+    #size {
+        .regular() {
+            font-size: unit(18/@base,rem);
+            line-height: 28 / 18;
+        }
+        .small() {
+            font-size: unit(15/@base, rem); 
+            line-height: 20 / 15;
+        }
+        .large() {
+            font-size: unit(24/@base,rem);
+            line-height: 32 / 24;
+        }
+        .h1() {
+            font-size: unit(62/@base, rem);
+            line-height: 66 / 62;
+        }
+        .h2() {
+            font-size: unit(24/@base,rem);
+            line-height: 28 / 24;
+        }
+    }
+    #style {
+        .link() {
+            color: @c_grey_x-dark;
+            text-decoration: underline;
+        }
+    }
+}
+
+h1 {
+    #type > #font > .serif;
+    #type > #size > .h1;
+}
+
+h2 {
+    #type > #size > .h2;
+}
+
+body, input, textarea, button {
+    color: @c_grey_x-dark;
+    #type > #font > .sans;
+}
+
+.prose {
+
+    p, ol, ul {
+        #type > #size > .regular;
+    }
+
+    //spacing
+    li + li {
+        margin-top: unit(2/@base,rem);
+    }
+    p, ol, ul, h2, h3, h4, h5, h6 {
+        margin-bottom: unit(12/@base,rem);
+    }
+
+    figcaption {
+        #type > #size > .small;
+        color: @c_grey_med;
+    }
+
+    a {
+        #type > #style > .link;
+    }
+
+    .lead {
+        #type > #size > .large;
+        color: @c_grey_dark;
+    }
+
+
+
+}
