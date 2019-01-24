@@ -24,6 +24,13 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Fira Code';
+    src: url('fonts/FiraCode.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 
@@ -90,6 +97,7 @@
     }
 }
 
+//global type styles
 h1 {
     #type > #font > .serif;
     #type > #size > .h1;
@@ -108,6 +116,21 @@ body, input, textarea, button {
     font-kerning: normal;
 }
 
+@supports (font-variant-position: sub) {
+  sub,sup {
+    position: inherit;
+    top: auto;
+    bottom: auto;
+  }
+  sub {
+    font-variant-position: sub;
+  }
+  sup {
+    font-variant-position: super;
+  }
+}
+
+//prose type styles
 .prose {
 
     //sizing
@@ -121,6 +144,7 @@ body, input, textarea, button {
     time {
         #type > #size > .small;
         color: @c_grey_dark;
+        display: inline-block;
     }
 
     //spacing
@@ -141,7 +165,46 @@ body, input, textarea, button {
     }
 
     
+    //tables
+    table {
+        border-collapse: collapse;
+        #type > #size > .regular;
+        font-variant-numeric: lining-nums tabular-nums;
+    }
 
+    thead tr {
+        border-bottom: 1px solid;
+    }
+
+    td, th {
+        padding: 0.5em;
+        line-height: 1;
+        vertical-align: top;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    td {
+        text-align: "." center;
+    }
+
+    //code
+    code {
+        font-family: 'Fira Code', monospace;
+        font-size: 87%;
+    }
+
+
+    p>code,
+    li>code {
+        padding: 0 unit(3/@base,rem);
+        margin: 0 unit(-3/@base,rem);
+        background-color: fade(black,5%);
+        border-radius: unit(6/@base,rem);
+        border: 1px solid fade(black,7%);
+    }
 
 
 }

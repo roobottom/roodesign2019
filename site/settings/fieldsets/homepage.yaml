@@ -1,0 +1,25 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+      subtitle:
+        type: text
+        display: Subtitle
+      content:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: Content
+      illustration:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Illustration
+taxonomies: true
+title: Homepage
+create_title: 'Create a new homepage'

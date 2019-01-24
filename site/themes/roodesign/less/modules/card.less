@@ -1,5 +1,16 @@
 .card {
-   &__cover {
-       margin: unit(12 / @base,rem) 0;
-   }
+    position: relative;
+
+    &__splodge {
+        #space > .pico;
+    }
+
+    .break-min({
+        &__splodge {
+            position: absolute;
+            left: unit(-74/@base,rem);
+            top: unit(-15/@base,rem);
+        }
+    });
+    
 }

@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Another awesome Statamic site">
     <title>{{ title or site_title }}</title>
     <link rel="stylesheet" href="{{ theme:css }}">
 </head>
@@ -11,162 +10,41 @@
 
 <body>
 
-    <div class="container">
-        {{ template_content }}
-    </div>
-
-    <h1>Grid test</h1>
-
-    <h2>Wide grids</h2>
-
-    <section class="grid grid--wide-title">
-        <p>--wide-title</p>
-        <p>Col b</p>
-    </section>
-
-    <section class="grid grid--wide-halves">
-        <p>--wide-halves</p>
-        <p>Col B</p>
-    </section>
-
-    <h2>Standard grids</h2>
-
-
-    <section class="grid grid--title">
-        <p>--title</p>
-        <p>Col B</p>
-    </section>
-
-    
-
-    <section class="grid grid--halves">
-        <p>--halves</p>
-        <p>Col B</p>
-    </section>
-
-    <section class="grid grid--split-halves">
-        <p>--split-halves</p>
-        <p>Col B</p>
-    </section>
-
-    <section class="grid grid--prose">
-        <div class="test">
-
-        </div>
-        <p>--prose</p>
-        <p>Col B</p>
-    </section>
-
-    <section class="grid">
-        <p>[standard full width]</p>
-        <p>Col B</p>
-    </section>
-
-    <h1>Typography Test</h1>
-
-    <section class="prose">
-        <h1>h1: About me</h1>
-        <p class="lead">p.lead: Hello, I’m <strong>Jon Roobottom</strong>. For two decades, I’ve worked hands-on and led teams in creating apps and websites that people
-        love. <em>This is italic</em>. Here's some ligatures: ffl ffi fi</p>
-        <p>p: Recently, I was Head of Design for <a href="#">Firefly Learning</a> — an award-winning Ed-tech company where I helped enhance the school
-        experience for thousands of students, <strong>teachers</strong> and <em>italic.</em></p>
-        <h2>h2: Sub title</h2>
-        <p>p: Before that, I worked in various digital product companies and agencies as a hands-on designer and front-end developer. Now I help organisations affect change through design: by empowering digital teams to work better together.</p>
-        <ul>
-            <li>Item 1</li>
-            <li><strong>Bold item 2</strong></li>
-            <li><em>Em item 3</em></li>
-            <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
+    <nav class="navigation space--tall">
+        <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg">
+                <g class="navigation__logo" fill="none" fill-rule="evenodd" stroke="#222">
+                    <path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z" />
+                    <path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z" />
+                </g>
+            </svg></a>
+        <ul class="navigation__items">
+            <li><a href="/" {{ if current_uri == '/' }} class="active" {{ /if }}>Home</a></li>
+            <li><a href="/work" {{ if segment_1 == 'work' }} class="active" {{ /if }}>My work</a></li>
+            <!--li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li-->
+            <!--<li><a href="#">Services</a></li>
+              <li><a href="#">About me</a></li> -->
+            <li><a href="/contact" {{ if segment_1 == 'contact' }} class="active" {{ /if }}>Contact me</a></li>
         </ul>
-        <ol>
-            <li>Item 1</li>
-            <li><strong>Bold item 2</strong></li>
-            <li><em>Em item 3</em></li>
-            <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
-        </ol>
-        <figcaption>this is small</figcaption>
-    </section>
+    </nav>
 
-    <h1>components</h1>
+    {{ template_content }}
 
-    <section>
-
-        <h2>figure, on a stage</h2>
-        <figure class="figure figure--stage">
-            <div class="figure__images">
-                <img src="/assets/dummy.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-        <h2>figure, bleed start</h2>
-        <figure class="figure figure--bleed-start">
-            <div class="figure__images">
-                <img src="/assets/dummy.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-        <h2>figure, bleed end</h2>
-        <figure class="figure figure--bleed-end">
-            <div class="figure__images">
-                <img src="/assets/dummy.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-        <h2>figure, bleed start and end</h2>
-        <figure class="figure figure--bleed-start figure--bleed-end">
-            <div class="figure__images">
-                <img src="/assets/dummy.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-        <h2>figure with small image</h2>
-        <figure class="figure">
-            <div class="figure__images">
-                <img src="/assets/dummy-sm.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-        <h2>figure with multiple images</h2>
-        <figure class="figure figure--gallery">
-            <div class="figure__images">
-                <img src="/assets/dummy-sm.jpg" />
-                <img src="/assets/dummy-sm.jpg" />
-            </div>
-            <figcaption>This is the caption for this image</figcaption>
-        </figure>
-
-
-    </section>
-
-    <h1>modules</h1>
-
-    <section>
-        <div class="card">
-            <h2 class="card__title">Card title</h2>
-            <div class="card__cover">
-                <figure class="figure figure--bleed-start figure--candy-green">
-                    <div class="figure__images">
-                        <img src="/assets/illustrations/Map.svg"/>
-                    </div>
-                </figure>
-            </div>
-            <div class="card__content prose">
-                <time>24th July 2020</time>
-                <p>I do some stuff! Isn't it great? Look at all this stuff I do. I help by:</p>
-                <ul>
-                    <li>Doing this</li>
-                    <li>That</li>
-                    <li>The other</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-   
+    <footer class="footer">
+    
+        <p class="site-footer__copyright"><strong>&copy; 2001-{{ now format='Y' }} Jon Roobottom</strong></p>
+        
+        <ul class="site-footer__social">
+            <li><a href="https://github.com/roobottom" title="Jon Roobottom's Github profile">{{ partial:icon
+                    name="github"}}</a></li>
+            <li><a href="https://medium.com/@roobottom" title="Jon Roobottom's articles on Medium">{{ partial:icon
+                    name="medium"}}</a></li>
+            <li><a href="https://www.linkedin.com/in/roobottom/" title="Jon Roobottom's LinkedIn profile">{{ partial:icon
+                    name="linkedin"}}</a></li>
+            <li><a href="https://twitter.com/roobottom" title="Jon Roobottom's Twitter profile">{{ partial:icon
+                    name="twitter"}}</a></li>
+        </ul>
+    
+    </footer>
 
     <script src="{{ theme:js }}"></script>
 

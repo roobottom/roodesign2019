@@ -1,0 +1,16 @@
+#container {
+    .default() {
+        margin: 0 auto;
+        padding: 0 @gap-rem;
+        padding: 0 var(--gap);
+        max-width: unit(@site-width/@base,rem);
+        box-sizing: border-box;
+    }
+}
+
+section,
+main,
+nav,
+footer {
+    #container > .default;
+}

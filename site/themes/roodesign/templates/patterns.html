@@ -1,0 +1,200 @@
+<h1>Grid test</h1>
+
+<h2>Wide grids</h2>
+
+<section class="grid grid--wide-title">
+    <p>--wide-title</p>
+    <p>Col b</p>
+</section>
+
+<section class="grid grid--wide-halves">
+    <p>--wide-halves</p>
+    <p>Col B</p>
+</section>
+
+<h2>Standard grids</h2>
+
+
+<section class="grid grid--title">
+    <p>--title</p>
+    <p>Col B</p>
+</section>
+
+
+
+<section class="grid grid--halves">
+    <p>--halves</p>
+    <p>Col B</p>
+</section>
+
+<section class="grid grid--split-halves">
+    <p>--split-halves</p>
+    <p>Col B</p>
+</section>
+
+<section class="grid grid--prose">
+    <div class="test">
+
+    </div>
+    <p>--prose</p>
+    <p>Col B</p>
+</section>
+
+<section class="grid">
+    <p>[standard full width]</p>
+    <p>Col B</p>
+</section>
+
+<h1>Typography Test</h1>
+
+<section class="prose">
+    <h1>h1: About me</h1>
+    <p class="lead">p.lead: Hello, I’m <strong>Jon Roobottom</strong>. For two decades, I’ve worked hands-on and led
+        teams in creating apps and websites that people
+        love. <em>This is italic</em>. Here's some ligatures: ffl ffi fi</p>
+    <p>p: Recently, I was Head of Design for <a href="#">Firefly Learning</a> — an award-winning Ed-tech company where
+        I helped enhance the school
+        experience for thousands of students, <strong>teachers</strong> and <em>italic.</em></p>
+    <h2>h2: Sub title</h2>
+    <p>p: Before that, I worked in various digital product companies and agencies as a hands-on designer and front-end
+        developer. Now I help organisations affect change through design: by empowering digital teams to work better
+        together.</p>
+    <ul>
+        <li>Item 1</li>
+        <li><strong>Bold item 2</strong></li>
+        <li><em>Em item 3</em></li>
+        <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
+    </ul>
+    <ol>
+        <li>Item 1</li>
+        <li><strong>Bold item 2</strong></li>
+        <li><em>Em item 3</em></li>
+        <li>This is item 4, it has a lot of content so lets see how this works out shall we.</li>
+    </ol>
+    <figcaption>this is small</figcaption>
+    <p>There's some <code>inline code here</code></p>
+</section>
+
+<h1>components</h1>
+
+<section>
+
+    <h2>figure, on a stage</h2>
+    <figure class="figure figure--stage">
+        <div class="figure__images">
+            <img src="/assets/dummy.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>figure, bleed start</h2>
+    <figure class="figure figure--bleed-start">
+        <div class="figure__images">
+            <img src="/assets/dummy.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>figure, bleed end</h2>
+    <figure class="figure figure--bleed-end">
+        <div class="figure__images">
+            <img src="/assets/dummy.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>figure, bleed start and end</h2>
+    <figure class="figure figure--bleed-start figure--bleed-end">
+        <div class="figure__images">
+            <img src="/assets/dummy.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>figure with small image</h2>
+    <figure class="figure">
+        <div class="figure__images">
+            <img src="/assets/dummy-sm.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>figure with multiple images</h2>
+    <figure class="figure figure--gallery">
+        <div class="figure__images">
+            <img src="/assets/dummy-sm.jpg" />
+            <img src="/assets/dummy-sm.jpg" />
+        </div>
+        <figcaption>This is the caption for this image</figcaption>
+    </figure>
+
+    <h2>Splodge</h2>
+    <div class="splodge splodge--green" aria-hidden="true">
+        <span class="splodge__content">i.</span>
+    </div>
+    <div class="splodge splodge--blue" aria-hidden="true">
+        <span class="splodge__content">ii.</span>
+    </div>
+    <div class="splodge splodge--red" aria-hidden="true">
+        <span class="splodge__content">iii.</span>
+    </div>
+    <div class="splodge splodge--yellow" aria-hidden="true">
+        <span class="splodge__content">iv.</span>
+    </div>
+    <div class="splodge splodge--purple" aria-hidden="true">
+        <span class="splodge__content">v.</span>
+    </div>
+
+
+</section>
+
+<h1>modules</h1>
+
+<section>
+
+    <h2>Card (green)</h2>
+    <div class="card">
+        <h2 class="card__title space--pico">Card title</h2>
+        <div class="card__cover space--pico">
+            <figure class="figure figure--bleed-start figure--candy-green">
+                <div class="figure__images">
+                    <img src="/assets/illustrations/Map.svg" />
+                </div>
+            </figure>
+        </div>
+        <div class="card__content prose">
+            <time>24th July 2020</time>
+            <p>I do some stuff! Isn't it great? Look at all this stuff I do. I help by:</p>
+            <ul>
+                <li>Doing this</li>
+                <li>That</li>
+                <li>The other</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Card (red with splodge)</h2>
+    <div class="card">
+        <div class="card__splodge splodge splodge--red" aria-hidden="true">
+            <span class="splodge__content">iii.</span>
+        </div>
+        <h2 class="card__title space--pico">Card title</h2>
+        <div class="card__cover space--pico">
+            <figure class="figure figure--bleed-start figure--candy-red">
+                <div class="figure__images">
+                    <img src="/assets/illustrations/Map.svg" />
+                </div>
+            </figure>
+        </div>
+        <div class="card__content prose">
+            <time>24th July 2020</time>
+            <p>I do some stuff! Isn't it great? Look at all this stuff I do. I help by:</p>
+            <ul>
+                <li>Doing this</li>
+                <li>That</li>
+                <li>The other</li>
+            </ul>
+        </div>
+    </div>
+
+</section>

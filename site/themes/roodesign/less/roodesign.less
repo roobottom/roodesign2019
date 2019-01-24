@@ -3,12 +3,17 @@
 @import '_typography';
 
 //layout
-@import 'grid';
+@import 'layout/grid';
+@import 'layout/spacing';
+@import 'layout/containers';
 
 //components
 @import 'components/figure';
+@import 'components/splodge';
 
 //modules
+@import 'modules/navigation';
+@import 'modules/footer';
 @import 'modules/card';
 
 //move this?
@@ -19,19 +24,7 @@
 }
 
 //DEV styles:
-section {
-    margin: 0 auto;
-    padding: 0 @gap-rem;
-    padding: 0 var(--gap);
-    max-width: unit(@site-width/@base,rem);
-    box-sizing: border-box;
-    outline: 1px solid black;
-}
 
-.grid > * {
-    background-color: red;
-    height: 100px;
-}
 
 .test {
     height: 400px;
@@ -40,12 +33,9 @@ section {
     margin-left: ~"calc(-1 * var(--gap))";
 }
 
-.prose > * {
-    max-width: 600px;
-}
-
 body {
-    padding-bottom: 100px;
+    margin: unit(@gap/@base,rem) 0;
+    margin: var(--gap) 0;
 }
 
 figure {

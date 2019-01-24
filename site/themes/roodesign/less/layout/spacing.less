@@ -1,0 +1,32 @@
+#space {
+    .calc(@space:1) {
+        margin-bottom: unit(@gap * @space / @base, rem);
+        margin-bottom: ~"calc( var(--gap) * @{space} )";
+    }
+    .pico() {
+        @s: 14 / @gap;
+        #space > .calc(@s);
+    }
+    .short() {
+        #space > .calc();
+    }
+    .tall() {
+        #space > .calc(2);
+    }
+    .grande() {
+        #space > .calc(4)
+    }
+}
+
+.space--pico {
+    #space > .pico;
+}
+.space--short {
+    #space > .short;
+}
+.space--tall {
+    #space > .tall;
+}
+.space--grande {
+    #space > .grande;
+}

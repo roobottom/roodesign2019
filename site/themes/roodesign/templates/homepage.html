@@ -1,0 +1,11 @@
+<section class="grid grid--wide-title space--pico">
+    <h1>{{ title }}</h1>
+</section>
+<section class="grid grid--wide-halves space--tall prose">
+    <p class="lead">{{ subtitle }}</p>
+</section>
+<main class="grid grid--wide-halves">
+    <div class="prose">    
+        {{ content | markdown | smartypants }}
+    </div>
+</main>

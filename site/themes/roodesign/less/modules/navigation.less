@@ -1,0 +1,32 @@
+.navigation {
+
+    display: flex;
+    justify-content: space-between;
+
+    li {list-style: none;}
+
+    a {
+        text-decoration: none;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+    &__items {
+        text-align: right;
+    }
+
+    .break-min({
+        align-items: center;
+        &__items {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__items li {
+            margin-left: unit(12/@base,rem);
+        }
+    });
+
+
+}
