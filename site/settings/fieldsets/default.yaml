@@ -1,0 +1,125 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        localizable: true
+      content:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        instructions: 'A few lines shown under the title'
+        display: Introduction
+      sections:
+        sets:
+          section:
+            display: Section
+            fields:
+              section_title:
+                type: text
+                display: Title
+              modules:
+                sets:
+                  prose:
+                    display: prose
+                    fields:
+                      prose_content:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        display: prose_content
+                      prose_figure_images:
+                        container: main
+                        folder: /
+                        restrict: false
+                        type: assets
+                        display: 'Figure image(s)'
+                      prose_figure_caption:
+                        type: text
+                        display: 'Figure Caption'
+                      prose_figure_style:
+                        options:
+                          figure--bleed-start: 'Bleed left'
+                          figure--bleed-end: 'Bleed right'
+                          figure--stage: Stage
+                        type: checkboxes
+                        display: 'Figure Style'
+                      prose_figure_color:
+                        options:
+                          default: None
+                          figure--green: Green
+                          figure--blue: Blue
+                          figure--red: Red
+                          figure--yellow: Yellow
+                          figure--purple: Purple
+                        inline: true
+                        type: radio
+                        display: 'Figure colour'
+                        default: default
+                  quote:
+                    display: Quote
+                    fields:
+                      quote_content:
+                        type: textarea
+                        display: Content
+                      quote_cite:
+                        type: text
+                        display: Citation
+                  figure:
+                    display: Figure
+                    fields:
+                      figure_images:
+                        container: main
+                        folder: /
+                        restrict: false
+                        type: assets
+                        display: Image(s)
+                      figure_caption:
+                        type: text
+                        display: 'Figure Caption'
+                      figure_style:
+                        options:
+                          figure--bleed-start: 'Bleed left'
+                          figure--bleed-end: 'Bleed right'
+                          figure--stage: Stage
+                        type: checkboxes
+                        display: 'Figure Style'
+                      figure_color:
+                        options:
+                          default: None
+                          figure--green: Green
+                          figure--blue: Blue
+                          figure--red: Red
+                          figure--yellow: Yellow
+                          figure--purple: Purple
+                        inline: true
+                        type: radio
+                        display: 'Figure colour'
+                        default: default
+                  outcomes:
+                    display: outcomes
+                    fields:
+                      outcome_set:
+                        sets:
+                          outcome:
+                            display: outcome
+                            fields:
+                              outcome_title:
+                                type: text
+                                display: Title
+                              outcome_content:
+                                cheatsheet: false
+                                restrict_assets: false
+                                type: markdown
+                                display: Content
+                        type: replicator
+                        display: outcome
+                type: replicator
+                display: Modules
+        type: replicator
+        display: Sections
+taxonomies: true
+title: Default
+create_title: 'Create a default page'

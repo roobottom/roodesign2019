@@ -1,0 +1,12 @@
+<div class="card">
+    <h2 class="card__title space--pico">{{ card_title }}</h2>
+    <div class="card__cover space--pico">
+        {{ partial:components/figure :figure_images="card_cover" figure_classes="figure--bleed-start figure--{card_color}" }}
+    </div>
+    <div class="card__content prose">
+        {{ if card_date }}
+        <time>24th July 2020</time>
+        {{ /if }}
+        {{ card_content | markdown | smartypants }}
+    </div>
+</div>

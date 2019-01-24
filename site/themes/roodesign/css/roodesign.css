@@ -172,21 +172,27 @@ a img {
   src: url('fonts/YoungSerif.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2');
+  font-family: 'Orkney';
+  src: url('fonts/Orkney Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('fonts/GlacialIndifference-Bold.woff2') format('woff2');
+  font-family: 'Orkney';
+  src: url('fonts/Orkney Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('fonts/GlacialIndifference-Italic.woff2') format('woff2');
+  font-family: 'Orkney';
+  src: url('fonts/Orkney Regular Italic.woff2') format('woff2');
   font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Orkney';
+  src: url('fonts/Orkney Bold Italic.woff2') format('woff2');
+  font-weight: bold;
   font-style: italic;
 }
 @font-face {
@@ -224,7 +230,7 @@ input,
 textarea,
 button {
   color: #222;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Orkney', sans-serif;
   -webkit-font-feature-settings: "liga" 1;
   font-feature-settings: "liga" 1;
   font-variant: normal;
@@ -267,13 +273,15 @@ button {
     line-height: 1.55555556;
   }
 }
-.prose .lead {
+.prose .lead,
+.prose--lead p {
   font-size: 1.1875rem;
   line-height: 1.36842105;
   color: #505050;
 }
 @media screen and (min-width: 30rem) {
-  .prose .lead {
+  .prose .lead,
+  .prose--lead p {
     font-size: 1.5rem;
     line-height: 1.33333333;
   }
@@ -444,15 +452,20 @@ button {
   margin-bottom: 7.5rem;
   margin-bottom: calc( var(--gap) * 4 );
 }
-section,
-main,
-nav,
-footer {
-  margin: 0 auto;
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 1.875rem;
   padding: 0 var(--gap);
   max-width: 75rem;
-  box-sizing: border-box;
+}
+header {
+  padding-top: 1.875rem;
+  padding-top: var(--gap);
+  background: url(img/pattern-roo-black-10.svg) bottom left repeat;
+}
+.page-homepage header {
+  background: none;
 }
 .figure img {
   display: block;
@@ -506,19 +519,19 @@ footer {
   background: white;
   box-shadow: 0 0 10px black;
 }
-.figure--candy-green .figure__images {
+.figure--green .figure__images {
   background-color: #F0FAF7;
 }
-.figure--candy-blue .figure__images {
+.figure--blue .figure__images {
   background-color: #D7E2F9;
 }
-.figure--candy-red .figure__images {
+.figure--red .figure__images {
   background-color: #F6DFDA;
 }
-.figure--candy-yellow .figure__images {
+.figure--yellow .figure__images {
   background-color: #FFEFCB;
 }
-.figure--candy-purple .figure__images {
+.figure--purple .figure__images {
   background-color: #FAF3FF;
 }
 .splodge {
@@ -588,9 +601,16 @@ footer {
 }
 .navigation a {
   text-decoration: none;
+  color: #222;
 }
 .navigation .active {
   font-weight: bold;
+  border-bottom: 5px solid #EDBB4A;
+}
+@media screen and (min-width: 30rem) {
+  .navigation .active {
+    border-width: 10px;
+  }
 }
 .navigation__items {
   text-align: right;
@@ -608,11 +628,24 @@ footer {
   }
 }
 .footer {
-  clear: right;
+  position: relative;
+  margin-top: 7.5rem;
+  margin-top: calc( var(--gap) * 4);
+}
+.footer__content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-top: 1px solid #737373;
+  padding-top: 1.875rem;
+  padding-top: var(--gap);
+}
+.footer__badge {
+  position: absolute;
+  left: 50%;
+  top: -19px;
+  margin-left: -18px;
 }
 .footer,
 .footer a {
@@ -627,7 +660,7 @@ footer {
   justify-content: center;
 }
 .footer__social li {
-  margin-right: 0.75rem;
+  margin-right: 1.125rem;
 }
 .footer__social li:last-child {
   margin: 0;
@@ -642,7 +675,7 @@ footer {
 @media screen and (min-width: 30rem) {
   .card__splodge {
     position: absolute;
-    left: -4.625rem;
+    left: -6.875rem;
     top: -0.9375rem;
   }
 }
@@ -653,11 +686,8 @@ footer {
   margin-left: calc(-1 * var(--gap));
 }
 body {
-  margin: 1.875rem 0;
-  margin: var(--gap) 0;
-}
-figure {
-  outline: 1px solid green;
+  margin-bottom: 1.875rem;
+  margin-bottom: var(--gap);
 }
 
 /*# sourceMappingURL=roodesign.css.map */

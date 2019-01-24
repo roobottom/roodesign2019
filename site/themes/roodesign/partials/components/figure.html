@@ -1,0 +1,10 @@
+<figure class="figure {{ figure_classes }}">
+    <div class="figure__images">
+        {{ assets:figure_images }}
+        <img src="{{ url }}" alt="{{ alt }}" />
+        {{ /assets:figure_images }}
+    </div>
+    {{ if figure_caption }}
+    <figcaption>{{ figure_caption }}</figcaption>
+    {{ /if }}
+</figure>

@@ -1,16 +1,23 @@
 #container {
     .default() {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0 @gap-rem;
         padding: 0 var(--gap);
         max-width: unit(@site-width/@base,rem);
-        box-sizing: border-box;
     }
 }
 
-section,
-main,
-nav,
-footer {
+.wrapper {
     #container > .default;
+}
+
+header {
+    padding-top: unit(@gap/@base,rem);
+    padding-top: var(--gap);
+    background: url(img/pattern-roo-black-10.svg) bottom left repeat;
+}
+
+.page-homepage header {
+    background: none;
 }

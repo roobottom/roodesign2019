@@ -8,41 +8,61 @@
 </head>
 
 
-<body>
+<body class="page-{{ template }}">
 
-    <nav class="navigation space--tall">
-        <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg">
-                <g class="navigation__logo" fill="none" fill-rule="evenodd" stroke="#222">
-                    <path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z" />
-                    <path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z" />
-                </g>
-            </svg></a>
-        <ul class="navigation__items">
-            <li><a href="/" {{ if current_uri == '/' }} class="active" {{ /if }}>Home</a></li>
-            <li><a href="/work" {{ if segment_1 == 'work' }} class="active" {{ /if }}>My work</a></li>
-            <!--li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li-->
-            <!--<li><a href="#">Services</a></li>
-              <li><a href="#">About me</a></li> -->
-            <li><a href="/contact" {{ if segment_1 == 'contact' }} class="active" {{ /if }}>Contact me</a></li>
-        </ul>
-    </nav>
+    <header>
+
+        <nav class="navigation space--tall wrapper">
+            <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg">
+                    <g class="navigation__logo" fill="none" fill-rule="evenodd" stroke="#222">
+                        <path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z" />
+                        <path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z" />
+                    </g>
+                </svg></a>
+            <ul class="navigation__items">
+                <li><a href="/" {{ if current_uri == '/' }} class="active" {{ /if }}>Home</a></li>
+                <li><a href="/services" {{ if segment_1 == 'services' }} class="active" {{ /if }}>Services</a></li>
+                <!--li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li-->
+                <!--<li><a href="#">Services</a></li>
+                <li><a href="#">About me</a></li> 
+                <li><a href="/contact" {{ if segment_1 == 'contact' }} class="active" {{ /if }}>Contact me</a></li>-->
+            </ul>
+        </nav>
+
+        {{ yield:header }}
+
+    </header>
 
     {{ template_content }}
 
-    <footer class="footer">
+    <footer class="footer wrapper">
+
+        <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="footer__badge">
+            <g fill="none" fill-rule="evenodd">
+                <path d="M15.735 8.851L27.993 21.2 15.735 33.549 3.477 21.2 15.735 8.851z" stroke="#FFF" stroke-width="5" fill="#FFF" />
+                <path d="M15.735 8.842l4.36-4.39 7.9 7.953-12.26 12.343L3.476 12.405l7.9-7.953 4.36 4.39z" stroke="#FFF"
+                    stroke-width="5" fill="#FFF" />
+                <path stroke="#3F3F3F" d="M15.735 12.4l8.736 8.8-8.736 8.8L7 21.2z" />
+                <path stroke="#3F3F3F" d="M20.095 8l4.376 4.405-8.736 8.795L7 12.405 11.375 8l4.36 4.39z" />
+            </g>
+        </svg>
+
+        <div class="footer__content">
     
-        <p class="site-footer__copyright"><strong>&copy; 2001-{{ now format='Y' }} Jon Roobottom</strong></p>
-        
-        <ul class="site-footer__social">
-            <li><a href="https://github.com/roobottom" title="Jon Roobottom's Github profile">{{ partial:icon
-                    name="github"}}</a></li>
-            <li><a href="https://medium.com/@roobottom" title="Jon Roobottom's articles on Medium">{{ partial:icon
-                    name="medium"}}</a></li>
-            <li><a href="https://www.linkedin.com/in/roobottom/" title="Jon Roobottom's LinkedIn profile">{{ partial:icon
-                    name="linkedin"}}</a></li>
-            <li><a href="https://twitter.com/roobottom" title="Jon Roobottom's Twitter profile">{{ partial:icon
-                    name="twitter"}}</a></li>
-        </ul>
+            <p class="footer__copyright">&copy; 2001-{{ now format='Y' }} <strong>Jon Roobottom</strong></p>
+            
+            <ul class="footer__social">
+                <li><a href="https://github.com/roobottom" title="Jon Roobottom's Github profile">{{ partial:components/icon
+                        name="github"}}</a></li>
+                <li><a href="https://medium.com/@roobottom" title="Jon Roobottom's articles on Medium">{{ partial:components/icon
+                        name="medium"}}</a></li>
+                <li><a href="https://www.linkedin.com/in/roobottom/" title="Jon Roobottom's LinkedIn profile">{{ partial:components/icon
+                        name="linkedin"}}</a></li>
+                <li><a href="https://twitter.com/roobottom" title="Jon Roobottom's Twitter profile">{{ partial:components/icon
+                        name="twitter"}}</a></li>
+            </ul>
+
+        </div>
     
     </footer>
 

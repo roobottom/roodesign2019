@@ -4,23 +4,30 @@
 }
 
 @font-face {
-    font-family: 'Glacial Indifference';
-    src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2');
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Glacial Indifference';
-    src: url('fonts/GlacialIndifference-Bold.woff2') format('woff2');
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Glacial Indifference';
-    src: url('fonts/GlacialIndifference-Italic.woff2') format('woff2');
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Regular Italic.woff2') format('woff2');
     font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Bold Italic.woff2') format('woff2');
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -48,7 +55,7 @@
             font-style: normal;
         }
         .sans() {
-            font-family: 'Glacial Indifference', sans-serif;
+            font-family: 'Orkney', sans-serif;
         }
     }
     #size {
@@ -137,7 +144,8 @@ body, input, textarea, button {
     p, ol, ul, h3, h4, h5, h6 {
         #type > #size > .regular;
     }
-    .lead {
+    .lead,
+    &--lead p {
         #type > #size > .large;
         color: @c_grey_dark;
     }

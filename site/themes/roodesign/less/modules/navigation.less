@@ -7,10 +7,16 @@
 
     a {
         text-decoration: none;
+        color: @c_grey_x-dark;
     }
 
     .active {
         font-weight: bold;
+        border-bottom: 5px solid @c_yellow;
+        .break-min({
+            border-width: 10px;
+        });
+        
     }
 
     &__items {
