@@ -22,6 +22,16 @@
     @rule();
   }
 }
+.break-mid(@rule) {
+  @media screen and (min-width: (@break-mid-rem) ) {
+    @rule();
+  }
+}
+.break-max(@rule) {
+  @media screen and (min-width: (@break-max-rem) ) {
+    @rule();
+  }
+}
 
 //DEV styles:
 
@@ -36,4 +46,14 @@
 body {
     margin-bottom: unit(@gap/@base,rem);
     margin-bottom: var(--gap);
+}
+
+.page-styleguide {
+  section {
+    outline: 1px solid blue;
+  }
+  .grid > * {
+    min-height: 180px;
+    outline: 1px solid green;
+  }
 }

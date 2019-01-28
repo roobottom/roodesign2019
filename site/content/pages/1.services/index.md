@@ -3,46 +3,49 @@ title: Services
 services:
   -
     type: card
-    card_title: 'Teams & Processes'
-    card_content: |
-      Organising modern product, design and development teams into effective units is often challenging. When there's no clear voice leading the way, I help by:
+    card_title: People
+    card_content: 'Coordinating designers, developers and product-people into effective teams is often challenging. I''ve led numerous teams, and I know how to get the best from people.'
+    card_cover: /assets/illustrations/people.svg
+    card_footer: |
+      ### I help by:
       
-      * Assessing team capability
-      * Plugging skill gaps
-      * Improving inter-team relationships
-      * Evolving processes
-      * Aligning everyone around a human-centred design approach
-    card_cover: /assets/illustrations/map.svg
+      * Clarifying roles and responsibilities
+      * Identifying who you should hire
+      * Mentoring team-members and leaders
   -
     type: card
-    card_title: 'Usability reviews'
-    card_content: |
-      It's easy to overlook good usability in favour of just getting the product out of the door. My years of hands-on experience makes me ideally placed to:
+    card_title: Processes
+    card_content: 'A clear process is *the* key to success for digital teams. I''ve spent countless hours refining procedures to create brilliant products.'
+    card_cover: /assets/illustrations/processes.svg
+    card_footer: |
+      ### I help by:
       
-      * Assess the usability of your product
-      * Identify issues with the most significant impact
-      * Introduce best practice to ensure good usability going forward
-    card_cover: /assets/illustrations/compass.svg
+      * Reviewing and refining processes
+      * Coaching leaders in creating effective workflows
+      * Aligning teams around a human-centred design approach
   -
     type: card
-    card_title: 'Creativity workshops'
-    card_content: |
-      The best ideas are often locked-away in people's heads. Either, they don't identify as "creative" or don't know how to articulate their thoughts. I run workshops to help:
-      
-      * Frame a problem to arrive at unexpected answers
-      * Leverage the experience of team members from across your business
-      * Find solutions that are cheap and easy to implement
+    card_title: Workshops
+    card_content: 'Sometimes the best ideas are locked away in the head of the most unexpected people. I''m experienced in running workshops that draw-out creativity.'
     card_cover: /assets/illustrations/brain.svg
+    card_footer: |
+      ### Workshops help by:
+      
+      * Reframing complex problems to make them easier to solve
+      * Leveraging the experience of diverse people
+      * Fostering early alignment
   -
     type: card
-    card_title: 'Design systems'
-    card_content: |
-      Inconsistent interfaces are a problem. Forcing users to relearn similar interactions leads to frustration. I help design and build pattern libraries and design system that:
+    card_title: 'Hands-on design'
+    card_content: 'Many of the teams I work with require an experienced pair of hands to accelerate their output. I can help with the day-to-day responsibilities of design and development.'
+    card_cover: /assets/illustrations/pencils.svg
+    card_footer: |
+      ### I'm adept at:
       
-      * Ensure interface consistency
-      * Provide detailed specifications for developers
-      * Speed-up the design process — saving time and money
-    card_cover: /assets/illustrations/cogs.svg
+      * Research and ideation
+      * Creating design systems
+      * Visual design
+      * Front-end development
 fieldset: services
 template: services
 id: 4ee381aa-1e14-40cc-a5ac-b6014689fab0

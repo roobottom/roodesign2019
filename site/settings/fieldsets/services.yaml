@@ -17,19 +17,22 @@ sections:
             fields:
               card_title:
                 type: text
-                display: card_title
+                display: Title
               card_cover:
                 container: main
                 folder: /
                 restrict: false
                 max_files: 1
                 type: assets
-                display: card_cover
+                display: Cover
               card_content:
                 cheatsheet: false
                 restrict_assets: false
                 type: markdown
-                display: card_content
+                display: Contents
+              card_footer:
+                type: markdown
+                display: Footer
         type: replicator
         display: Services
 taxonomies: true

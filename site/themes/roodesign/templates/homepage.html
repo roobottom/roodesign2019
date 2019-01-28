@@ -1,16 +1,18 @@
 {{ section:header }}
-    <div class="wrapper grid grid--wide-title space--pico">
+    <div class="grid grid--title space--pico">
         <h1>{{ title }}</h1>
     </div>
 {{ /section:header }}
 
 <main class="wrapper">
-    <div class="grid grid--wide-halves space--tall prose">
-        <p class="lead">{{ subtitle }}</p>
-    </div>
-    <div class="grid grid--wide-halves">
+    <div class="grid grid--halves">
         <div class="prose">
+            <div class="space--tall"><p class="lead">{{ subtitle }}</p></div>
             {{ content | markdown | smartypants }}
         </div>
+        {{ partial:components/figure :figure_images="illustration" }}
+    </div>
+    <div class="grid">
+        {{ partial:components/button button_url="/services" button_title="Find out how" }}
     </div>
 </main>

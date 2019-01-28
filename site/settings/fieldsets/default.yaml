@@ -20,6 +20,14 @@ sections:
               section_title:
                 type: text
                 display: Title
+              section_decoration:
+                options:
+                  none: None
+                  logo: 'Logo Pattern'
+                inline: true
+                type: radio
+                display: Decoration
+                default: none
               modules:
                 sets:
                   prose:
@@ -58,6 +66,14 @@ sections:
                         type: radio
                         display: 'Figure colour'
                         default: default
+                      prose_figure_align:
+                        options:
+                          top: Top
+                          bottom: Bottom
+                        inline: true
+                        type: radio
+                        display: 'Align Figure'
+                        default: top
                   quote:
                     display: Quote
                     fields:

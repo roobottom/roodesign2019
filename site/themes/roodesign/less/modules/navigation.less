@@ -12,10 +12,19 @@
 
     .active {
         font-weight: bold;
-        border-bottom: 5px solid @c_yellow;
-        .break-min({
-            border-width: 10px;
-        });
+        position: relative;
+        text-shadow: 2px 0 0 white;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 8px;
+            width: 100%;
+            background: @c_yellow;
+            z-index: -1;
+        }
         
     }
 
@@ -30,7 +39,7 @@
             justify-content: space-between;
         }
         &__items li {
-            margin-left: unit(12/@base,rem);
+            margin-left: unit(@gap/@base,rem);
         }
     });
 

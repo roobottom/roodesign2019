@@ -1,8 +1,8 @@
 {{ section:header }}
-    <div class="wrapper grid grid--title space--pico">
+    <div class="grid grid--title space--pico">
         <h1>{{ title }}</h1>
     </div>
-    <div class="wrapper grid grid--halves prose space--grande">
+    <div class="grid grid--prose prose space--tall">
         <div class="prose prose--lead">
             {{ content }}
         </div>
@@ -10,9 +10,9 @@
 {{ /section:header }}
 
 <main class="wrapper">
-    <div class="grid grid--split-halves">
+    <div class="grid grid--halves grid--space-grande">
         {{ services }}
-            {{ partial src="modules/card" card_color={switch between="green|blue|red|yellow|purple"} }}
+            {{ partial src="modules/card" }}
         {{ /services }}
     </div>
 </main>

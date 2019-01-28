@@ -1,16 +1,18 @@
 .card {
     position: relative;
+    background-color: white;
+    box-shadow: 0 0 20px fade(black,10%);
 
-    &__splodge {
-        #space > .pico;
+    &__content,
+    &__footer {
+        padding: unit(@gap * 1.5 / @base,rem);
+        padding: ~"var(--gap) calc( var(--gap) * 1.5)";
     }
 
-    .break-min({
-        &__splodge {
-            position: absolute;
-            left: unit(-110/@base,rem);
-            top: unit(-15/@base,rem);
-        }
-    });
+
+    &__footer {
+        border-top: 1px solid @c_grey_light;
+        background: url(img/pattern-roo-black-10.svg) top left repeat;
+    }
     
 }

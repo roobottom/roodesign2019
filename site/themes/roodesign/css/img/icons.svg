@@ -20,4 +20,10 @@
   <symbol id="icon-prev" viewBox="0 0 10 14" width="10" height="14">
     <path d="M10 9.995L6.663 13 0 7l6.663-6L10 4.005 6.674 7z" stroke="#000" fill="none" fill-rule="evenodd"/>
   </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 16 16" width="16" height="16">
+    <g fill="none" fill-rule="evenodd">
+      <path fill="#F9CD68" d="M5 5l3-3 6 6-6 6-3-3 3-3z"/>
+      <path stroke="#222" d="M3 5l3-3 6 6-6 6-3-3 3-3z"/>
+    </g>
+  </symbol>
 </svg>

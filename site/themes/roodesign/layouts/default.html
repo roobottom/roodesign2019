@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title or site_title }}</title>
     <link rel="stylesheet" href="{{ theme:css }}">
+    <link rel="shortcut icon" type="image/x-icon" href="/site/themes/roodesign/css/img/favicon.ico" />
 </head>
 
 
 <body class="page-{{ template }}">
 
-    <header>
+    <header class="wrapper">
 
-        <nav class="navigation space--tall wrapper">
-            <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg">
-                    <g class="navigation__logo" fill="none" fill-rule="evenodd" stroke="#222">
-                        <path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z" />
-                        <path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z" />
+        <nav class="navigation space--tall">
+            <a href="/" class="navigation__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="36">
+                    <g fill="none" fill-rule="evenodd">
+                        <path fill="#F9CD68" d="M14.9 24.5l8.4-8.4 5 5-8.5 8.4-3.5 3.5L5 21.7l3.5-3.5 6.4 6.3zM12 14.6l4.3-4.2 4.2 4.2-4.2 4.3-4.3-4.3zm-7-7l4.2-4.3 5 5-4.3 4.2-5-5zm13.4.7L24 2.6 28.3 7l-5.7 5.6-4.2-4.2z" />
+                        <path fill="#222" fill-rule="nonzero" d="M2.1 7.6L15 20.3l5.6-5.6-4.3-4.3.7-.7 4.3 4.3 6.4-6.4-5.7-5.7-11.3 11.3-.7-.7 4.2-4.2-6.3-6.4L2 7.6zm19.8 7l7 7.2-14 14.1L.6 21.8l7-7.2-7-7 7-7.1 7.2 7 7-7 7.1 7-7.1 7.2zm-7 7.1l-6.4-6.3L2 21.8l12.7 12.7 12.7-12.7-6.3-6.4-6.3 6.3z" />
                     </g>
-                </svg></a>
+                </svg>
+            </a>
             <ul class="navigation__items">
                 <li><a href="/" {{ if current_uri == '/' }} class="active" {{ /if }}>Home</a></li>
                 <li><a href="/services" {{ if segment_1 == 'services' }} class="active" {{ /if }}>Services</a></li>
+                <li><a href="/about"  {{ if segment_1 == 'about' }} class="active" {{ /if }}>About me</a></li>
                 <!--li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li-->
                 <!--<li><a href="#">Services</a></li>
                 <li><a href="#">About me</a></li> 

@@ -83,6 +83,10 @@
             font-size: unit(32/@base, rem);
             line-height: 38 / 32;
             .break-min({
+                font-size: unit(44/@base, rem);
+                line-height: 48 / 44;
+            });
+            .break-mid({
                 font-size: unit(62/@base, rem);
                 line-height: 66 / 62;
             });
@@ -162,6 +166,10 @@ body, input, textarea, button {
     p, ol, ul, h2, h3, h4, h5, h6, time {
         margin-bottom: unit(12/@base,rem);
     }
+    p+h2, ul+h2, ol+h2 {
+        margin-top: unit(@gap * 1.5 /@base,rem);
+        margin-top: ~"calc( var(--gap) * 1.5)";
+    }
 
     
     //styling
@@ -172,6 +180,15 @@ body, input, textarea, button {
         font-weight: bold;
     }
 
+    //lists {
+    ul li {list-style-image: url('img/bullet.svg');}
+    ul li li {list-style-image: url('img/bullet-level-2.svg');}
+    ul li li li {list-style: square;}
+
+    ol li li {list-style-type: lower-alpha;}
+    ol li li li {list-style-type: lower-roman;}
+
+    li li { margin-left: 1em; }
     
     //tables
     table {

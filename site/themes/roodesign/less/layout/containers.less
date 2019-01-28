@@ -12,12 +12,24 @@
     #container > .default;
 }
 
-header {
-    padding-top: unit(@gap/@base,rem);
-    padding-top: var(--gap);
-    background: url(img/pattern-roo-black-10.svg) bottom left repeat;
+body {
+    margin: unit(@gap/@base,rem) 0;
+    margin: var(--gap) 0;
 }
 
 .page-homepage header {
     background: none;
+}
+
+body {
+    background-image: 
+        linear-gradient(0deg, white 0%, white 40%, fade(white,50%) 41%, fade(white,0%) 100%),
+        url(img/pattern-roo-black-10.svg);
+    background-position:  
+        bottom left,
+        top left;
+    background-repeat: 
+        no-repeat,
+        repeat;
+    background-attachment: fixed;
 }
