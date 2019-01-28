@@ -530,8 +530,25 @@ body {
   margin: 2rem 0;
   margin: var(--gap) 0;
 }
-.page-homepage header {
-  background: none;
+.showcase {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.showcase > :nth-child(2n) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 36.25rem) {
+  .showcase {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .showcase > *:nth-child(2n-1) {
+    flex-basis: 40%;
+  }
+  .showcase > *:nth-child(2n) {
+    flex-basis: 50%;
+  }
 }
 body {
   background-image: linear-gradient(0deg, white 0%, white 40%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0) 100%), url(img/pattern-roo-black-10.svg);
@@ -608,63 +625,17 @@ body {
 .figure--purple .figure__images {
   background-color: #FAF3FF;
 }
-.splodge {
-  min-width: 4.0625rem;
-  min-height: 3.5625rem;
-  align-items: center;
-  justify-content: center;
+.button {
+  border: 1px solid #222;
+  padding: 1rem 2rem;
+  text-decoration: none;
   display: inline-flex;
+  align-items: center;
+  color: #222;
+  box-shadow: 3px 3px 0 #EDBB4A;
 }
-.splodge__content {
-  font-family: 'YoungSerif', serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-@media screen and (min-width: 36.25rem) {
-  .splodge__content {
-    font-size: 1.5rem;
-    line-height: 1.16666667;
-  }
-}
-@supports ((-webkit-mask: url()) or (mask: url())) {
-  .splodge {
-    -webkit-mask: url('img/splodge.svg');
-    mask: url('img/splodge.svg');
-    -webkit-mask-size: cover;
-    mask-size: cover;
-  }
-  .splodge--green {
-    background-color: #71CBAF;
-  }
-  .splodge--green .splodge__content {
-    color: #222;
-  }
-  .splodge--blue {
-    background-color: #004ADB;
-  }
-  .splodge--blue .splodge__content {
-    color: white;
-  }
-  .splodge--red {
-    background-color: #E97055;
-  }
-  .splodge--red .splodge__content {
-    color: white;
-  }
-  .splodge--yellow {
-    background-color: #EDBB4A;
-  }
-  .splodge--yellow .splodge__content {
-    color: #222;
-  }
-  .splodge--purple {
-    background-color: #9013FE;
-  }
-  .splodge--purple .splodge__content {
-    color: white;
-  }
+.button > .icon {
+  margin-left: 0.5rem;
 }
 .navigation {
   display: flex;

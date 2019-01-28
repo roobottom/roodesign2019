@@ -15,8 +15,8 @@ services:
   -
     type: card
     card_title: Processes
-    card_content: 'A clear process is *the* key to success for digital teams. I''ve spent countless hours refining procedures to create brilliant products.'
-    card_cover: /assets/illustrations/processes.svg
+    card_content: 'A clear process is *the* key to success for digital teams. I''ve spent countless hours refining procedures to create brilliant products. Now, I love helping other teams do this too!'
+    card_cover: /assets/illustrations/process.svg
     card_footer: |
       ### I help by:
       

@@ -4,15 +4,15 @@
     </div>
 {{ /section:header }}
 
-<main class="wrapper">
-    <div class="grid grid--halves">
-        <div class="prose">
-            <div class="space--tall"><p class="lead">{{ subtitle }}</p></div>
-            {{ content | markdown | smartypants }}
-        </div>
-        {{ partial:components/figure :figure_images="illustration" }}
-    </div>
-    <div class="grid">
+<main class="wrapper ">
+    <div class="showcase">
+        <article>
+            <div class="prose space--short">
+                <div class="space--tall"><p class="lead">{{ subtitle }}</p></div>
+                {{ content | markdown | smartypants }}
+            </div>
         {{ partial:components/button button_url="/services" button_title="Find out how" }}
+        </article>
+        {{ partial:components/figure :figure_images="illustration" }}
     </div>
 </main>
