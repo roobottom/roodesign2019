@@ -10,7 +10,8 @@ services:
       ### I help by:
       
       * Clarifying roles and responsibilities
-      * Identifying who you should hire
+      * Identifying skill gaps
+      * Helping to hire the right people
       * Mentoring team-members and leaders
   -
     type: card

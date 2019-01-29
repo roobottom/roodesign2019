@@ -1,1 +1,7 @@
-<a href="{{ button_url }}" class="button">{{ button_title }}{{ partial:components/icon name="arrow" }}</a>
+{{ if not button_type }}
+    <button type="submit" class="button {{ button_classes }}">{{ button_title }}{{ partial:components/icon name="arrow" }}</button>
+{{ /if }}
+
+{{ if button_type == 'link' }}
+<a href="{{ button_url }}" class="button {{ button_classes }}">{{ button_title }}{{ partial:components/icon name="arrow" }}</a>
+{{ /if }}

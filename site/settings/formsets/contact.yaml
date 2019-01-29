@@ -1,28 +1,28 @@
-title: Contact Me
-
+title: Contact
+honeypot: data
 fields:
   name:
     display: Name
-    validate: required|min:2
+    validate: required
   email:
-    display: Email Address
+    display: Email
     validate: required|email
-  number:
-    display: Favorite Number
-    validate: integer
-  comment:
-    display: Comment
-
+  message:
+    display: Message
+    validate: required
+columns:
+  - name
+  - email
+  - message
 metrics:
   -
     type: total
-    label: Total Responses
+    label: 'Total submissions'
+email:
   -
-    type: sum
-    field: number
-    label: Sum of Favorite Number
+    to: roo@roodesign.co.uk
+    from: '{{ email }}'
+    subject: 'New website contact'
   -
-    type: average
-    field: number
-    label: Average Favorite Number
-    precision: 1
+    to: '{{ email }}'
+    subject: 'Thanks for your message!'

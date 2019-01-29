@@ -1,0 +1,8 @@
+driver: smtp
+host: smtp.mailgun.org
+port: 2525
+encryption: tls
+username: postmaster@roodesign.co.uk
+password: "{env:MAILGUN_PASS}"
+from_email: roo@roodesign.co.uk
+from_name: 'Jon Roobottom'

@@ -1,0 +1,34 @@
+@c_danger: #CC444A;
+@c_success: #53A351;
+
+.form {
+
+
+
+  &__group {
+    
+  }
+
+  &__label {
+    display: block;
+    #type > #size > .regular;
+    
+    &--danger { color: @c_danger; }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1px solid @c_grey_med;
+    background-color: white;
+    padding: unit(@gap/2/@base,rem);
+    #type > #size > .regular;
+
+    &--trap {display: none;}
+
+  }
+
+
+
+}
