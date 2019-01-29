@@ -37,7 +37,7 @@ services:
       * Fostering early alignment
   -
     type: card
-    card_title: 'Hands-on design'
+    card_title: 'Hands-on design & code'
     card_content: 'Many of the teams I work with require an experienced pair of hands to accelerate their output. I can help with the day-to-day responsibilities of design and development.'
     card_cover: /assets/illustrations/pencils.svg
     card_footer: |

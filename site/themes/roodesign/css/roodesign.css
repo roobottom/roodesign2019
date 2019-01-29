@@ -646,19 +646,39 @@ body {
 .button > .icon {
   margin-left: 0.5rem;
 }
-.form__label {
+.form__label,
+.form__legend {
   display: block;
   font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 36.25rem) {
-  .form__label {
+  .form__label,
+  .form__legend {
     font-size: 1.125rem;
     line-height: 1.55555556;
   }
 }
-.form__label--danger {
+.form__label--danger,
+.form__legend--danger {
   color: #CC444A;
+}
+.form__label-tip {
+  color: #737373;
+}
+.form__set {
+  border: 1px solid #EFEFEF;
+  padding: 2rem;
+}
+.form__legend {
+  margin-left: -2rem;
+}
+.form__set-group {
+  display: flex;
+  align-items: center;
+}
+.form__set-group .form__label {
+  margin-left: 0.5rem;
 }
 .form__input {
   box-sizing: border-box;
@@ -669,12 +689,17 @@ body {
   padding: 1rem;
   font-size: 1rem;
   line-height: 1.5;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 36.25rem) {
   .form__input {
     font-size: 1.125rem;
     line-height: 1.55555556;
   }
+}
+.form__input:focus {
+  border-color: #222;
+  box-shadow: 0 0 10px #EDBB4A;
 }
 .form__input--trap {
   display: none;
