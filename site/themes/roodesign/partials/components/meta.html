@@ -1,0 +1,6 @@
+<dl class="meta">
+    {{ meta }}
+    <dt class="meta__title">{{ meta_title| markdown | smartypants }}</dt>
+    <dd class="meta__value{{ if not last }} space--pico{{ /if }}">{{ meta_value | markdown | smartypants }}</dd>
+    {{ /meta }}
+</dl>

@@ -1,6 +1,6 @@
 {{ section:header }}
 <div class="grid grid--title space--pico">
-    <h1>{{ title }}</h1>
+    <h1 class="bleed--start">{{ title }}</h1>
 </div>
 <div class="grid grid--prose prose prose--lead space--tall">
     {{ content | smartypants }}
@@ -8,47 +8,49 @@
 {{ /section:header }}
 
 <main class="wrapper">
-    {{ form:create in="contact" attr="class:form form--contact" redirect="/contact/thanks" }}
-    <div class="form__group space--short">
-        <label for="name" class="form__label{{if error:name }} form__label--danger{{ /if }} space--pico">{{if error:name }}<strong>Please
-                enter:</strong> {{ /if }}Your name <span class="form__label-tip">(required)</span></label>
-        <input name="name" id="name" type="text" value="{{ old:name }}" class="form__input form__input--text" placeholder="What should I call you?" />
+    <div class="grid grid--prose">
+        {{ form:create in="contact" attr="class:form form--contact" redirect="/contact/thanks" }}
+        <div class="form__group space--short">
+            <label for="name" class="form__label{{if error:name }} form__label--danger{{ /if }} space--pico">{{if error:name }}<strong>Please
+                    enter:</strong> {{ /if }}Your name <span class="form__label-tip">(required)</span></label>
+            <input name="name" id="name" type="text" value="{{ old:name }}" class="form__input form__input--text" placeholder="What should I call you?" />
+        </div>
+        <div class="form__group space--short">
+            <label for="email" class="form__label{{if error:email }} form__label--danger{{ /if }} space--pico">{{if error:email }}<strong>Please
+                    enter a valid:</strong> {{ /if }}Email address <span class="form__label-tip">(required)</span></label>
+            <input name="email" id="email" type="text" value="{{ old:email }}" class="form__input form__input--text" placeholder="eg. you@website.com" />
+        </div>
+        <div class="form__group space--short">
+            <label for="message" class="form__label{{if error:message }} form__label--danger{{ /if }} space--pico">{{if error:message }}<strong>Please
+                    enter a:</strong> {{ /if }}Message <span class="form__label-tip">(required)</span></label>
+            <textarea name="message" id="message" class="form__input form__input--textarea" placeholder="Tell me about your project.">{{ old:message }}</textarea>
+        </div>
+        {{# <div class="form__group space--short">
+            <fieldset class="form__set">
+            <legend class="space--pico form__legend">I'm interested in <span class="form__label-tip">(optional)</span></legend>
+                <div class="form__set-group">
+                    <input type="checkbox" name="work-type-people" id="work-type-people" {{ if old:work-type-people }}checked{{ /if }}/>
+                    <label for="work-type-people" class="form__label">Team development</label>
+                </div>
+                <div class="form__set-group">
+                    <input type="checkbox" name="work-type-people" id="work-type-process" {{ if old:work-type-process }}checked{{ /if }}/>
+                    <label for="work-type-process" class="form__label">Improving processes</label>
+                </div>
+                {{ old:work-type-workshops }}
+                <div class="form__set-group">
+                    <input type="checkbox" name="work-type-people" id="work-type-workshops" {{ if old:work-type-workshops }}checked{{ /if }}/>
+                    <label for="work-type-workshops" class="form__label">A Workshop</label>
+                </div>
+                <div class="form__set-group">
+                    <input type="checkbox" name="work-type-people" id="work-type-handson" {{ if old:work-type-handson }}checked{{ /if }}/>
+                    <label for="work-type-handson" class="form__label">Hands-on design or development</label>
+                </div>
+            </fieldset> 
+        </div> #}}
+        <div class="form__group">
+            <input name="data" type="text" class="form__input form__input--trap" />
+            {{ partial:components/button button_url="/services" button_title="Send message" }}
+        </div>
+        {{ /form:create }}
     </div>
-    <div class="form__group space--short">
-        <label for="email" class="form__label{{if error:email }} form__label--danger{{ /if }} space--pico">{{if error:email }}<strong>Please
-                enter a valid:</strong> {{ /if }}Email address <span class="form__label-tip">(required)</span></label>
-        <input name="email" id="email" type="text" value="{{ old:email }}" class="form__input form__input--text" placeholder="eg. you@website.com" />
-    </div>
-    <div class="form__group space--short">
-        <label for="message" class="form__label{{if error:message }} form__label--danger{{ /if }} space--pico">{{if error:message }}<strong>Please
-                enter a:</strong> {{ /if }}Message <span class="form__label-tip">(required)</span></label>
-        <textarea name="message" id="message" class="form__input form__input--textarea" placeholder="Tell me about your project.">{{ old:message }}</textarea>
-    </div>
-    {{# <div class="form__group space--short">
-        <fieldset class="form__set">
-        <legend class="space--pico form__legend">I'm interested in <span class="form__label-tip">(optional)</span></legend>
-            <div class="form__set-group">
-                <input type="checkbox" name="work-type-people" id="work-type-people" {{ if old:work-type-people }}checked{{ /if }}/>
-                <label for="work-type-people" class="form__label">Team development</label>
-            </div>
-            <div class="form__set-group">
-                <input type="checkbox" name="work-type-people" id="work-type-process" {{ if old:work-type-process }}checked{{ /if }}/>
-                <label for="work-type-process" class="form__label">Improving processes</label>
-            </div>
-            {{ old:work-type-workshops }}
-            <div class="form__set-group">
-                <input type="checkbox" name="work-type-people" id="work-type-workshops" {{ if old:work-type-workshops }}checked{{ /if }}/>
-                <label for="work-type-workshops" class="form__label">A Workshop</label>
-            </div>
-            <div class="form__set-group">
-                <input type="checkbox" name="work-type-people" id="work-type-handson" {{ if old:work-type-handson }}checked{{ /if }}/>
-                <label for="work-type-handson" class="form__label">Hands-on design or development</label>
-            </div>
-        </fieldset> 
-    </div> #}}
-    <div class="form__group">
-        <input name="data" type="text" class="form__input form__input--trap" />
-        {{ partial:components/button button_url="/services" button_title="Send message" }}
-    </div>
-    {{ /form:create }}
 </main>

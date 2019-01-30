@@ -3,7 +3,7 @@ title: Services
 services:
   -
     type: card
-    card_title: People
+    card_title: 'Team leadership'
     card_content: 'Coordinating designers, developers and product-people into effective teams is often challenging. I''ve led numerous teams, and I know how to get the best from people.'
     card_cover: /assets/illustrations/people.svg
     card_footer: |

@@ -1,13 +1,19 @@
 //default grids with flexbox
 .grid {
-    >* {
-        margin-bottom: unit(@gap * 2/@base,rem);
-        margin-bottom: ~"calc(var(--gap) * 2)";
+    display: flex;
+    flex-direction: column;
+    &--showcase {
+        flex-direction: column-reverse;
+        >*:nth-child(2n) {
+            margin-bottom: unit(@gap/@base,rem);
+            margin-bottom: var(--gap);
+        }
     }
 }
+
 @media screen and (min-width: (@break-min-rem)) {
     .grid {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -29,21 +35,20 @@
             }
         }
         &--halves,
-        &--split-halves {
+        &--split-halves,
+        &--showcase {
             >* {
                 flex-basis: 45%;
+                margin-bottom: 0;
             }
-        }
+        }   
 
     }
 }
 
-@media screen and (min-width: (@break-mid-rem)) {
-    
-}
-
 //enhanced grids with css grid
 @supports (display:grid) {
+    
     @media screen and (min-width: (@break-min-rem)) {
     
         .grid {
@@ -67,6 +72,10 @@
                 grid-row-gap: unit(@gap * 4 / @base, rem);
                 grid-row-gap: ~"calc( var(--gap) * 4)";
             }
+
+            &--align-bottom {
+                align-self: end;
+            }
         }
     
 
@@ -89,7 +98,11 @@
             }
         }
 
-        
+        .grid--showcase {
+            >*:nth-child(2n-1) {
+                grid-row: 2;
+            }
+        }
 
         
     }
@@ -113,19 +126,42 @@
             }
         }
 
+        .grid--showcase {
+            >*:nth-child(2n-1) {
+                grid-column: 1 / span 3;
+                grid-row: 1;
+            }
+            >*:nth-child(2n) {
+                grid-column: span 5;
+            }
+        }
+
     }
 
     @media screen and (min-width: (@break-max-rem)) {
+
+        .grid {
+            >* {
+                grid-column: 2 / span 7;
+            }
+        }
+
+        .grid--title {
+            >* {
+                grid-column: 2 / span 6;
+            }
+        }
         
         .grid--prose {
             >*:nth-child(2n-1) {
-                grid-column: 1 / span 5;
+                grid-column: 2 / span 4;
             }
             >*:nth-child(2n) {
                 grid-column: 7 / span 2;
             }
         }
-        .grid--split-halves {
+        .grid--split-halves,
+        .grid--halves {
             >*:nth-child(2n-1) {
                 grid-column: 2 / span 3;
             }
@@ -133,6 +169,16 @@
                 grid-column: 5 / span 3;
             }
         }
+
+        .grid--showcase {
+            >*:nth-child(2n-1) {
+                grid-column: 2 / span 3;
+            }
+            >*:nth-child(2n) {
+                grid-column: span 4;
+            }
+        }
+
     }
 
 }

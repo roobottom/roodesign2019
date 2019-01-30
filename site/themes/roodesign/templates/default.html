@@ -1,26 +1,42 @@
 {{ section:header }}
     <div class="grid grid--title space--pico">
-        <h1>{{ title }}</h1>
+        <h1 class="bleed--start">{{ title }}</h1>
     </div>
-    <div class="grid grid--prose space--tall">
+    <div class="grid grid--prose space--alto">
         <div class="prose prose--lead">
             {{ content | smartypants }}
         </div>
+        {{ if meta }}
+            {{ partial:components/meta }} 
+        {{ /if }}
     </div>
 {{ /section:header }}
 
 
 {{ sections }}
     <section class="wrapper space--grande section-decoration--{{ section_decoration }}"{{ if section_title}} id="{{ section_title | slugify }}"{{ /if }}>
+        {{ if section_title }}
+        <div class="grid">
+            <h2 class="space--pico marker"><a href="#{{ section_title | slugify }}">{{ section_title }}</a></h2>
+        </div>
+        {{ /if }}
         {{ modules }}
             {{ if type == "figure" }}
-                <div class="grid space--short">
+                <div class="grid{{ if not last }} space--tall{{ /if }}">
                     {{ partial src="components/figure" }}
                 </div>
             {{ /if }}
             {{ if type == "prose" }}
-            <div class="grid grid--prose">
+            <div class="grid grid--prose{{ if not last }} space--short{{ /if }}">
                 {{ partial src="modules/prose" }}
+            </div>
+            {{ /if }}
+            {{ if type == "quote" }}
+            <div class="grid {{ if not last }} space--short{{ /if }}">
+                <blockquote class="quote">
+                    <p>{{ quote_content | smartypants }}</p>
+                    {{ if quote_cite }}<cite>{{ quote_cite | markdown | smartypants }}</cite>{{ /if }}
+                </blockquote>
             </div>
             {{ /if }}
         {{ /modules }}

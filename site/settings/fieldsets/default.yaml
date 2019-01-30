@@ -52,6 +52,7 @@ sections:
                           figure--bleed-start: 'Bleed left'
                           figure--bleed-end: 'Bleed right'
                           figure--stage: Stage
+                          figure--full: 'Force full width'
                         type: checkboxes
                         display: 'Figure Style'
                       prose_figure_color:
@@ -93,13 +94,14 @@ sections:
                         type: assets
                         display: Image(s)
                       figure_caption:
-                        type: text
+                        type: markdown
                         display: 'Figure Caption'
                       figure_style:
                         options:
                           figure--bleed-start: 'Bleed left'
                           figure--bleed-end: 'Bleed right'
                           figure--stage: Stage
+                          figure--full: 'Force full width'
                         type: checkboxes
                         display: 'Figure Style'
                       figure_color:
@@ -136,6 +138,22 @@ sections:
                 display: Modules
         type: replicator
         display: Sections
-taxonomies: true
+  sidebar:
+    display: Sidebar
+    fields:
+      meta:
+        sets:
+          meta_set:
+            display: 'Meta set'
+            fields:
+              meta_title:
+                type: text
+                display: Title
+              meta_value:
+                type: text
+                display: Value
+        type: replicator
+        display: Meta
+taxonomies: false
 title: Default
-create_title: 'Create a default page'
+create_title: 'Create a page or post'

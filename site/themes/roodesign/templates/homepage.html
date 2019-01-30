@@ -1,11 +1,11 @@
 {{ section:header }}
     <div class="grid grid--title space--pico">
-        <h1>{{ title }}</h1>
+        <h1 class="bleed--start">{{ title }}</h1>
     </div>
 {{ /section:header }}
 
 <main class="wrapper ">
-    <div class="showcase">
+    <div class="grid grid--showcase">
         <article>
             <div class="prose space--short">
                 {{ content | markdown | smartypants }}

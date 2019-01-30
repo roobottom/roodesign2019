@@ -3,7 +3,10 @@
     display: flex;
     justify-content: space-between;
 
-    li {list-style: none;}
+    li {
+        list-style: none;
+        margin-bottom: unit(8/@base,rem);
+    }
 
     a {
         text-decoration: none;
@@ -40,6 +43,7 @@
         }
         &__items li {
             margin-left: unit(@gap/@base,rem);
+            margin-bottom: 0;
         }
     });
 

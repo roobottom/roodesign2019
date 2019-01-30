@@ -35,6 +35,6 @@ sections:
                 display: Footer
         type: replicator
         display: Services
-taxonomies: true
+taxonomies: false
 title: Services
 create_title: 'Create a new services page'

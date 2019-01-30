@@ -1,6 +1,6 @@
 <article class="prose">
     {{ prose_content | markdown | smartypants }}
 </article>
-<aside>
+<aside class="grid--align-{{ prose_figure_align }}">
     {{ partial:components/figure :figure_color="prose_figure_color" :figure_style="prose_figure_style" :figure_images="prose_figure_images" :figure_caption="prose_figure_caption" }}
 </aside>
