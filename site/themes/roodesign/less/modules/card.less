@@ -3,10 +3,46 @@
     background-color: white;
     box-shadow: 0 0 20px fade(black,10%);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #animation > .bounce;
+
+
+    &--is-linked:hover {
+        .break-mid({
+           transform: scale(1.05);
+        });
+    }
+
     &__content,
-    &__footer {
+    &__footer,
+    &__cta {
         padding: unit(@gap * 1.5 / @base,rem);
         padding: ~"var(--gap) calc( var(--gap) * 1.5)";
+        display: block;
+    }
+
+    &__cta {
+        color: @c_grey_x-dark;
+        #type > #size > .regular;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon {
+            margin-left: unit(4/@base,rem);
+        }
+
     }
 
 

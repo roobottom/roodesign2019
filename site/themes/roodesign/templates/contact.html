@@ -1,14 +1,14 @@
 {{ section:header }}
-<div class="grid grid--title space--pico">
+<div class="grid grid--cinched space--pico">
     <h1 class="bleed--start">{{ title }}</h1>
 </div>
-<div class="grid grid--prose prose prose--lead space--tall">
+<div class="grid grid--fat-thin prose prose--lead space--tall">
     {{ content | smartypants }}
 </div>
 {{ /section:header }}
 
-<main class="wrapper">
-    <div class="grid grid--prose">
+<main class="container">
+    <div class="grid grid--fat-thin">
         {{ form:create in="contact" attr="class:form form--contact" redirect="/contact/thanks" }}
         <div class="form__group space--short">
             <label for="name" class="form__label{{if error:name }} form__label--danger{{ /if }} space--pico">{{if error:name }}<strong>Please
@@ -52,5 +52,7 @@
             {{ partial:components/button button_url="/services" button_title="Send message" }}
         </div>
         {{ /form:create }}
+        {{ partial:components/meta }}
     </div>
+    
 </main>

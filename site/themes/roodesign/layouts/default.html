@@ -11,7 +11,7 @@
 
 <body class="page-{{ template }}">
 
-    <header class="wrapper">
+    <header class="container">
 
         <nav class="navigation space--tall">
             <a href="/" class="navigation__logo">
@@ -25,11 +25,9 @@
             <ul class="navigation__items">
                 <li><a href="/" {{ if current_uri == '/' }} class="active" {{ /if }}>Home</a></li>
                 <li><a href="/services" {{ if segment_1 == 'services' }} class="active" {{ /if }}>Services</a></li>
-                <!--li><a href="/case-studies" {{ if segment_1 == 'case-studies' }} class="active" {{ /if }}>Case studies</a></li-->
-                <li><a href="/about"  {{ if segment_1 == 'about' }} class="active" {{ /if }}>About me</a></li>
+                <li><a href="/case-studies" {{ if segment_1 == 'case-studies' }} class="active" {{ /if }}>Case studies</a></li>
                 <!--li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li-->
-                <!--<li><a href="#">Services</a></li>
-                <li><a href="#">About me</a></li> -->
+                <li><a href="/about" {{ if segment_1 == 'about' }} class="active" {{ /if }}>About me</a></li>
                 <li><a href="/contact" {{ if segment_1 == 'contact' }} class="active" {{ /if }}>Contact</a></li>
             </ul>
         </nav>
@@ -40,7 +38,7 @@
 
     {{ template_content }}
 
-    <footer class="footer wrapper">
+    <footer class="footer container">
 
         <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="footer__badge">
             <g fill="none" fill-rule="evenodd">

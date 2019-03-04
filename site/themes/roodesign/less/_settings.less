@@ -39,15 +39,20 @@
 @c_purple_light: #FAF3FF;
 
 :root {
-    --gap: unit(20/@base,rem);
+    --gap: unit(15/@base,rem);
     --base: @base;
     --fontbase: 15;
 }
 
-@media screen and (min-width: (@break-min-rem) ) {
+.break-min({
     :root {
-        --gap: @gap-rem;
-        --base: @base;
+        --gap: unit(20/@base,rem);
         --fontbase: @fontbase;
     }
-}
+});
+
+.break-mid({
+    :root {
+        --gap: @gap-rem;
+    }
+});

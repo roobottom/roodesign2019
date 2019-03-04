@@ -64,7 +64,7 @@
             line-height: 24 / 16;
             .break-min({
                 font-size: unit(18/@base,rem);
-                line-height: 28 / 18;
+                line-height: 30 / 18;
             });
         }
         .small() {
@@ -171,7 +171,7 @@ body {
         align-items: center;
         background: url(img/splodge.svg) top left no-repeat;
         background-size: contain;
-        top: unit( -61 / @base,rem);
+        top: unit( -43 / @base,rem);
         left: 0;
         text-shadow: 2px 0 0 white;
 
@@ -211,7 +211,7 @@ body {
     }
 
     //spacing
-    .break-mid({
+    .break-max({
         >ol>li,
         >ul>li {
             padding-left: unit(8/@base,rem);
@@ -290,5 +290,12 @@ body {
         border: 1px solid fade(black,7%);
     }
 
+    //mark (highlight)
+    mark {
+        background-image: linear-gradient(-100deg,fade(@c_yellow,30%),fade(@c_yellow,50%) 80%,fade(@c_yellow,10%));
+        border-radius: 1em 0;
+        padding: 0 .35em;
+        margin: 0 -.35em;
+    }
 
 }

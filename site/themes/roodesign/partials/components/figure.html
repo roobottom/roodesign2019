@@ -1,7 +1,11 @@
 <figure class="figure{{ figure_style }} {{ value }}{{ /figure_style }} {{ figure_color }}">
     <div class="figure__images">
         {{ assets:figure_images }}
+        {{ if figure_style | contains:figure--gallery }}
+        <img src="{{ glide:url width="500" }}" alt="{{ alt }}" />
+        {{ else }}
         <img src="{{ url }}" alt="{{ alt }}" />
+        {{ endif }}
         {{ /assets:figure_images }}
     </div>
     {{ if figure_caption }}

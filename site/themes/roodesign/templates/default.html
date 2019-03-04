@@ -1,8 +1,8 @@
 {{ section:header }}
-    <div class="grid grid--title space--pico">
+    <div class="grid grid--cinched space--pico">
         <h1 class="bleed--start">{{ title }}</h1>
     </div>
-    <div class="grid grid--prose space--alto">
+    <div class="grid grid--fat-thin {{ if segment_1 == 'case-studies' }}space--alto{{ else }}space--tall{{ /if }}">
         <div class="prose prose--lead">
             {{ content | smartypants }}
         </div>
@@ -14,7 +14,7 @@
 
 
 {{ sections }}
-    <section class="wrapper space--grande section-decoration--{{ section_decoration }}"{{ if section_title}} id="{{ section_title | slugify }}"{{ /if }}>
+    <section class="container space--grande container--decoration-{{ section_decoration }}"{{ if section_title}} id="{{ section_title | slugify }}"{{ /if }}>
         {{ if section_title }}
         <div class="grid">
             <h2 class="space--pico marker"><a href="#{{ section_title | slugify }}">{{ section_title }}</a></h2>
@@ -22,22 +22,46 @@
         {{ /if }}
         {{ modules }}
             {{ if type == "figure" }}
-                <div class="grid{{ if not last }} space--tall{{ /if }}">
+                <div class="grid grid--cinched{{ if not last }} space--short{{ /if }}">
                     {{ partial src="components/figure" }}
                 </div>
             {{ /if }}
             {{ if type == "prose" }}
-            <div class="grid grid--prose{{ if not last }} space--short{{ /if }}">
+            <div class="grid grid--fat-thin{{ if not last }} space--short{{ /if }}">
                 {{ partial src="modules/prose" }}
             </div>
             {{ /if }}
             {{ if type == "quote" }}
-            <div class="grid {{ if not last }} space--short{{ /if }}">
+            <div class="grid grid--cinched{{ if not last }} space--short{{ /if }}">
                 <blockquote class="quote">
                     <p>{{ quote_content | smartypants }}</p>
                     {{ if quote_cite }}<cite>{{ quote_cite | markdown | smartypants }}</cite>{{ /if }}
                 </blockquote>
             </div>
+            {{ /if }}
+            {{ if type == "outcomes" }}
+                <div class="grid grid--thirds{{ if not last }} space--short{{ /if }}">
+                    {{ outcomes }}
+                    <article class="outcome prose">
+                        <h3>{{ outcome_title | smartypants }}</h3>
+                        {{ outcome_content | markdown | smartpants }}
+                    </article>
+                    {{ /outcomes }}
+                </div>
+            {{ /if }}
+            {{ if type == "hero" }}
+                <figure class="hero{{ if not last }} space--short{{ /if }}">
+                    <div class="grid grid--full hero__images space--pico">
+                    {{ assets:hero_image }}
+                        <img src="{{ url }}" alt="{{ hero_caption or title}}" />
+                    {{ /assets:hero_image }}
+                    </div>
+                    {{ if hero_caption }}
+                    <div class="grid grid--fat-thin hero__caption">
+                        {{ hero_caption | markdown | smartypants }}
+                    </div>
+                    {{ /if  }}
+                </figure>
             {{ /if }}
         {{ /modules }}
     </section>

@@ -1,15 +1,15 @@
 {{ section:header }}
-    <div class="grid grid--title space--pico">
+    <div class="grid grid--cinched space--pico">
         <h1 class="bleed--start">{{ title }}</h1>
     </div>
-    <div class="grid grid--prose prose space--tall">
+    <div class="grid grid--fat-thin prose space--tall">
         <div class="prose prose--lead">
             {{ content }}
         </div>
     </div>
 {{ /section:header }}
 
-<main class="wrapper">
+<main class="container">
     <div class="grid grid--halves">
         {{ services }}
             {{ partial src="modules/card" card_classes={ switch between='bleed--start|bleed--end' } }}
