@@ -20,16 +20,13 @@ sections:
           
           Now I help organisations affect change through design: by empowering digital teams to work better together. 
           
-          ## The best ideas come from the most unexpected places
+          ## Good ideas from unexpected places
           
           Born-and-bred in the industrial Black Country, I always wanted to follow my dad and grandfather into a career in engineering. In fact, I studied electrical engineering at University but a year in I rediscovered my love of design and switched my degree.
           
           But the apple didn't fall that far from the tree. I approach design in much the same way as an engineer would: by continually refining a set of systems and processes to increase the chances of a great result every time.
           
           I firmly believe that everyone is creative and genuinely great ideas often come from unexpected places. That's why I'm excited to help companies make stronger digital products by improving their processes and culture in a way that draws out the creativity in everyone.
-        prose_figure_images:
-          - /assets/client-logos.png
-        prose_figure_caption: 'Some of the amazing organisations I’ve had the pleasure of working with over my career.'
         prose_figure_color: default
         prose_figure_align: top
     section_decoration: none

@@ -23,7 +23,7 @@ sections:
               section_decoration:
                 options:
                   none: None
-                  logo: 'Logo Pattern'
+                  highlight: Highlighted
                 inline: true
                 type: radio
                 display: Decoration
@@ -31,7 +31,7 @@ sections:
               modules:
                 sets:
                   prose:
-                    display: prose
+                    display: Prose
                     fields:
                       prose_content:
                         cheatsheet: false
@@ -53,6 +53,7 @@ sections:
                           figure--bleed-end: 'Bleed right'
                           figure--stage: Stage
                           figure--full: 'Force full width'
+                          figure--gallery: 'Gallery mode'
                         type: checkboxes
                         display: 'Figure Style'
                       prose_figure_color:
@@ -102,6 +103,7 @@ sections:
                           figure--bleed-end: 'Bleed right'
                           figure--stage: Stage
                           figure--full: 'Force full width'
+                          figure--gallery: 'Gallery mode'
                         type: checkboxes
                         display: 'Figure Style'
                       figure_color:
@@ -117,9 +119,9 @@ sections:
                         display: 'Figure colour'
                         default: default
                   outcomes:
-                    display: outcomes
+                    display: Outcomes
                     fields:
-                      outcome_set:
+                      outcomes:
                         sets:
                           outcome:
                             display: outcome
@@ -133,7 +135,21 @@ sections:
                                 type: markdown
                                 display: Content
                         type: replicator
-                        display: outcome
+                        display: Outcome
+                  hero:
+                    display: Hero
+                    fields:
+                      hero_image:
+                        container: main
+                        folder: /
+                        restrict: false
+                        type: assets
+                        display: Image(s)
+                      hero_caption:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        display: Caption
                 type: replicator
                 display: Modules
         type: replicator
@@ -154,6 +170,17 @@ sections:
                 display: Value
         type: replicator
         display: Meta
+      cover:
+        type: assets
+        container: main
+        folder: 
+        restrict: false
+        display: 'Cover Image'
+        max_files: 1
+      noun:
+        type: text
+        display: Noun
+        instructions: 'A single (proper-)noun that describes this page/post'
 taxonomies: false
 title: Default
 create_title: 'Create a page or post'
