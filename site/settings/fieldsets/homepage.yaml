@@ -13,6 +13,14 @@ sections:
         restrict_assets: false
         type: markdown
         display: Content
+      cta:
+        type: text
+        display: 'Button text'
+        width: 50
+      cta_url:
+        type: text
+        display: 'Where should the button go?'
+        width: 50
       illustration:
         container: main
         folder: /

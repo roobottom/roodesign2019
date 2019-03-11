@@ -10,7 +10,7 @@
             <div class="prose space--short">
                 {{ content | markdown | smartypants }}
             </div>
-        {{ partial:components/button button_url="/services" button_title="Find out how" button_type="link" }}
+        {{ partial:components/button :button_url="cta_url" :button_title="cta" button_type="link" }}
         </article>
         {{ partial:components/figure :figure_images="illustration" }}
     </div>

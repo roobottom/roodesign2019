@@ -12,6 +12,9 @@ sections:
         type: markdown
         instructions: 'A few lines shown under the title'
         display: Introduction
+      number_sections:
+        type: toggle
+        display: 'Number the sections?'
       sections:
         sets:
           section:
@@ -181,6 +184,10 @@ sections:
         type: text
         display: Noun
         instructions: 'A single (proper-)noun that describes this page/post'
+      featured:
+        type: toggle
+        display: 'Featured?'
+        instruction: 'Is this a featured post?'
 taxonomies: false
 title: Default
 create_title: 'Create a page or post'

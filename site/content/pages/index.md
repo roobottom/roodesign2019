@@ -1,11 +1,13 @@
 ---
 title: 'I help teams create stronger digital products'
 subtitle: 'Refining process; expanding creativity.'
+cta: 'Discover how I can help'
+cta_url: /services
 illustration: /assets/illustrations/homepage.png
 template: homepage
 fieldset: homepage
 id: db0ae4e3-4f10-4802-bc40-0b880cbf02c7
 ---
-Organisations are reawakening to the power of in-house product, design and development teams but struggle to understand how best to organise and motivate people to maximise quality.
+Increasingly, organisations understand the power of outstanding user experience. The way in which a website, app or service engages a user is *the* essential ingredient for success. 
 
-I work with individuals, managers and senior leaders to illuminate problems, tune-up processes and inspire teams to reach their full potential.
+I work with in-house product teams, agencies and directly with clients to help them realise the full potential of their digital products.
