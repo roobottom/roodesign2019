@@ -44,7 +44,7 @@ services:
     card_title: 'Strategy and process'
     card_content: 'The act of design is about more than making a product look pretty. Done right, a great design process can help inform overall business strategy — accelerating you away from your competition.'
     card_footer: |
-      ### I help senior leaders and C-suits to:
+      ### I help senior leaders and C-Suites to:
       
       * Understand the power and possibilities in a user-centred design process
       * Leverage design insights to make business decisions
