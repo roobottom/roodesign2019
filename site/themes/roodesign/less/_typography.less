@@ -79,6 +79,14 @@
                 line-height: 32 / 24;
             });
         }
+        .x-large() {
+            font-size: unit(23/@base,rem);
+            line-height: 27 / 23;
+            .break-min({
+                font-size: unit(32/@base,rem);
+                line-height: 40 / 32;
+            });
+        }
         .h1() {
             font-size: unit(32/@base, rem);
             line-height: 38 / 32;
@@ -158,7 +166,7 @@ body {
         color: @c_grey_med;
     }
     position: relative;
-    &:before {
+    &--number:before {
         counter-increment: section;
         content: counter(section, lower-roman) + "."; 
         #type > #font > .serif;
@@ -215,7 +223,7 @@ body {
         >ol>li,
         >ul>li {
             padding-left: unit(8/@base,rem);
-            margin-left: unit(-8/@base,rem);
+            //margin-left: unit(-8/@base,rem);
         }
     });
     li + li {

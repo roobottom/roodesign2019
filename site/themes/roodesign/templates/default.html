@@ -17,7 +17,7 @@
     <section class="container space--grande container--decoration-{{ section_decoration }}"{{ if section_title}} id="{{ section_title | slugify }}"{{ /if }}>
         {{ if section_title }}
         <div class="grid">
-            <h2 class="space--pico marker"><a href="#{{ section_title | slugify }}">{{ section_title }}</a></h2>
+            <h2 class="space--pico marker {{ if number_sections }}marker--number{{ /if }}"><a href="#{{ section_title | slugify }}">{{ section_title }}</a></h2>
         </div>
         {{ /if }}
         {{ modules }}

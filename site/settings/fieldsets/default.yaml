@@ -184,6 +184,16 @@ sections:
         type: text
         display: Noun
         instructions: 'A single (proper-)noun that describes this page/post'
+      color:
+        type: select
+        options:
+          - none
+          - yellow
+          - red
+          - blue
+          - green
+          - purple
+        default: none
       featured:
         type: toggle
         display: 'Featured?'

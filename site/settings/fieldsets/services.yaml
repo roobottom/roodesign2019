@@ -33,6 +33,16 @@ sections:
               card_footer:
                 type: markdown
                 display: Footer
+              card_color:
+                type: select
+                options:
+                  none: None
+                  green: Green
+                  red: Red
+                  blue: Blue
+                  yellow: Yellow
+                  purple: Purple
+                default: none
         type: replicator
         display: Services
 taxonomies: false

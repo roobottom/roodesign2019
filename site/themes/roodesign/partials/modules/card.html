@@ -1,15 +1,18 @@
-<div class="card {{card_classes}}{{ if card_url }} card--is-linked{{ /if}}">
-    <article class="card__content">
-    <div class="card__cover space--short">
-        {{ partial:components/figure :figure_images="card_cover" figure_classes="figure--bleed-start figure--{card_color}" }}
-    </div>
+<article class="card {{card_classes}}{{ if card_url }} card--is-linked{{ /if}} {{ if card_color }} card--color-{{ card_color }}{{ /if }}">
+  
+  {{ if card_cover }}
+  <header class="card__cover">
+    {{ partial:components/figure :figure_images="card_cover" figure_classes="figure--bleed-start figure--{card_color}" }}
+  </header>
+  {{ /if }}
+
+  <div class="card__content">
     <h2 class="card__title space--pico">{{ card_title }}</h2>
     <div class="prose">
         {{ card_content | markdown | smartypants }}
     </div>
-    </article>
+  </div>
     
-
     {{ if card_footer }}
     <footer class="card__footer">
         <div class="prose">
@@ -21,4 +24,5 @@
     {{ if card_url }}
         <a href="{{ card_url }}" class="card__cta">{{ card_cta }}{{ partial:components/icon name="arrow" }}</a>
     {{ /if }}
-</div>
+
+</article>
